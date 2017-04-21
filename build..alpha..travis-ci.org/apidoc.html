@@ -1,0 +1,1367 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+    >negotiator (v0.6.1)</a>
+</h1>
+<h4>HTTP content negotiation</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.negotiator">module negotiator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.negotiator">
+            function <span class="apidocSignatureSpan"></span>negotiator
+            <span class="apidocSignatureSpan">(request)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.Negotiator">
+            function <span class="apidocSignatureSpan">negotiator.</span>Negotiator
+            <span class="apidocSignatureSpan">(request)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.charset">
+            function <span class="apidocSignatureSpan">negotiator.</span>charset
+            <span class="apidocSignatureSpan">(accept, provided)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.encoding">
+            function <span class="apidocSignatureSpan">negotiator.</span>encoding
+            <span class="apidocSignatureSpan">(accept, provided)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.language">
+            function <span class="apidocSignatureSpan">negotiator.</span>language
+            <span class="apidocSignatureSpan">(accept, provided)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.mediaType">
+            function <span class="apidocSignatureSpan">negotiator.</span>mediaType
+            <span class="apidocSignatureSpan">(accept, provided)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">negotiator.</span>Negotiator.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.negotiator.Negotiator">module negotiator.Negotiator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.Negotiator.Negotiator">
+            function <span class="apidocSignatureSpan">negotiator.</span>Negotiator
+            <span class="apidocSignatureSpan">(request)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.negotiator.Negotiator.prototype">module negotiator.Negotiator.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.Negotiator.prototype.charset">
+            function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>charset
+            <span class="apidocSignatureSpan">(available)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.Negotiator.prototype.charsets">
+            function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>charsets
+            <span class="apidocSignatureSpan">(available)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.Negotiator.prototype.encoding">
+            function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>encoding
+            <span class="apidocSignatureSpan">(available)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.Negotiator.prototype.encodings">
+            function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>encodings
+            <span class="apidocSignatureSpan">(available)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.Negotiator.prototype.language">
+            function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>language
+            <span class="apidocSignatureSpan">(available)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.Negotiator.prototype.languages">
+            function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>languages
+            <span class="apidocSignatureSpan">(available)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.Negotiator.prototype.mediaType">
+            function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>mediaType
+            <span class="apidocSignatureSpan">(available)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.Negotiator.prototype.mediaTypes">
+            function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>mediaTypes
+            <span class="apidocSignatureSpan">(available)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.Negotiator.prototype.preferredCharset">
+            function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>preferredCharset
+            <span class="apidocSignatureSpan">(available)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.Negotiator.prototype.preferredCharsets">
+            function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>preferredCharsets
+            <span class="apidocSignatureSpan">(available)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.Negotiator.prototype.preferredEncoding">
+            function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>preferredEncoding
+            <span class="apidocSignatureSpan">(available)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.Negotiator.prototype.preferredEncodings">
+            function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>preferredEncodings
+            <span class="apidocSignatureSpan">(available)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.Negotiator.prototype.preferredLanguage">
+            function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>preferredLanguage
+            <span class="apidocSignatureSpan">(available)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.Negotiator.prototype.preferredLanguages">
+            function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>preferredLanguages
+            <span class="apidocSignatureSpan">(available)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.Negotiator.prototype.preferredMediaType">
+            function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>preferredMediaType
+            <span class="apidocSignatureSpan">(available)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.Negotiator.prototype.preferredMediaTypes">
+            function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>preferredMediaTypes
+            <span class="apidocSignatureSpan">(available)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.negotiator.charset">module negotiator.charset</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.charset.charset">
+            function <span class="apidocSignatureSpan">negotiator.</span>charset
+            <span class="apidocSignatureSpan">(accept, provided)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.charset.preferredCharsets">
+            function <span class="apidocSignatureSpan">negotiator.charset.</span>preferredCharsets
+            <span class="apidocSignatureSpan">(accept, provided)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.negotiator.encoding">module negotiator.encoding</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.encoding.encoding">
+            function <span class="apidocSignatureSpan">negotiator.</span>encoding
+            <span class="apidocSignatureSpan">(accept, provided)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.encoding.preferredEncodings">
+            function <span class="apidocSignatureSpan">negotiator.encoding.</span>preferredEncodings
+            <span class="apidocSignatureSpan">(accept, provided)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.negotiator.language">module negotiator.language</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.language.language">
+            function <span class="apidocSignatureSpan">negotiator.</span>language
+            <span class="apidocSignatureSpan">(accept, provided)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.language.preferredLanguages">
+            function <span class="apidocSignatureSpan">negotiator.language.</span>preferredLanguages
+            <span class="apidocSignatureSpan">(accept, provided)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.negotiator.mediaType">module negotiator.mediaType</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.mediaType.mediaType">
+            function <span class="apidocSignatureSpan">negotiator.</span>mediaType
+            <span class="apidocSignatureSpan">(accept, provided)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.negotiator.mediaType.preferredMediaTypes">
+            function <span class="apidocSignatureSpan">negotiator.mediaType.</span>preferredMediaTypes
+            <span class="apidocSignatureSpan">(accept, provided)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.negotiator" id="apidoc.module.negotiator">module negotiator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.negotiator" id="apidoc.element.negotiator.negotiator">
+        function <span class="apidocSignatureSpan"></span>negotiator
+        <span class="apidocSignatureSpan">(request)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Negotiator(request) {
+  if (!(this instanceof Negotiator)) {
+    return new Negotiator(request);
+  }
+
+  this.request = request;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.Negotiator" id="apidoc.element.negotiator.Negotiator">
+        function <span class="apidocSignatureSpan">negotiator.</span>Negotiator
+        <span class="apidocSignatureSpan">(request)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Negotiator(request) {
+  if (!(this instanceof Negotiator)) {
+    return new Negotiator(request);
+  }
+
+  this.request = request;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.charset" id="apidoc.element.negotiator.charset">
+        function <span class="apidocSignatureSpan">negotiator.</span>charset
+        <span class="apidocSignatureSpan">(accept, provided)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function preferredCharsets(accept, provided) {
+  // RFC 2616 sec 14.2: no header = *
+  var accepts = parseAcceptCharset(accept === undefined ? &#x27;*&#x27; : accept || &#x27;&#x27;);
+
+  if (!provided) {
+    // sorted list of all charsets
+    return accepts
+      .filter(isQuality)
+      .sort(compareSpecs)
+      .map(getFullCharset);
+  }
+
+  var priorities = provided.map(function getPriority(type, index) {
+    return getCharsetPriority(type, accepts, index);
+  });
+
+  // sorted list of accepted charsets
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getCharset(priority) {
+    return provided[priorities.indexOf(priority)];
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+negotiator.charsets()
+// -&#x3e; [&#x27;utf-8&#x27;, &#x27;iso-8859-1&#x27;, &#x27;utf-7&#x27;]
+
+negotiator.charsets(availableCharsets)
+// -&#x3e; [&#x27;utf-8&#x27;, &#x27;iso-8859-1&#x27;]
+
+negotiator.<span class="apidocCodeKeywordSpan">charset</span>(availableCharsets)
+// -&#x3e; &#x27;utf-8&#x27;
+```
+
+You can check a working example at `examples/charset.js`.
+
+#### Methods
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.encoding" id="apidoc.element.negotiator.encoding">
+        function <span class="apidocSignatureSpan">negotiator.</span>encoding
+        <span class="apidocSignatureSpan">(accept, provided)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function preferredEncodings(accept, provided) {
+  var accepts = parseAcceptEncoding(accept || &#x27;&#x27;);
+
+  if (!provided) {
+    // sorted list of all encodings
+    return accepts
+      .filter(isQuality)
+      .sort(compareSpecs)
+      .map(getFullEncoding);
+  }
+
+  var priorities = provided.map(function getPriority(type, index) {
+    return getEncodingPriority(type, accepts, index);
+  });
+
+  // sorted list of accepted encodings
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getEncoding(priority) {
+    return provided[priorities.indexOf(priority)];
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+negotiator.encodings()
+// -&#x3e; [&#x27;gzip&#x27;, &#x27;identity&#x27;, &#x27;compress&#x27;]
+
+negotiator.encodings(availableEncodings)
+// -&#x3e; [&#x27;gzip&#x27;, &#x27;identity&#x27;]
+
+negotiator.<span class="apidocCodeKeywordSpan">encoding</span>(availableEncodings)
+// -&#x3e; &#x27;gzip&#x27;
+```
+
+You can check a working example at `examples/encoding.js`.
+
+#### Methods
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.language" id="apidoc.element.negotiator.language">
+        function <span class="apidocSignatureSpan">negotiator.</span>language
+        <span class="apidocSignatureSpan">(accept, provided)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function preferredLanguages(accept, provided) {
+  // RFC 2616 sec 14.4: no header = *
+  var accepts = parseAcceptLanguage(accept === undefined ? &#x27;*&#x27; : accept || &#x27;&#x27;);
+
+  if (!provided) {
+    // sorted list of all languages
+    return accepts
+      .filter(isQuality)
+      .sort(compareSpecs)
+      .map(getFullLanguage);
+  }
+
+  var priorities = provided.map(function getPriority(type, index) {
+    return getLanguagePriority(type, accepts, index);
+  });
+
+  // sorted list of accepted languages
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getLanguage(priority) {
+    return provided[priorities.indexOf(priority)];
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+negotiator.languages()
+// -&#x3e; [&#x27;es&#x27;, &#x27;pt&#x27;, &#x27;en&#x27;]
+
+negotiator.languages(availableLanguages)
+// -&#x3e; [&#x27;es&#x27;, &#x27;en&#x27;]
+
+language = negotiator.<span class="apidocCodeKeywordSpan">language</span>(availableLanguages)
+// -&#x3e; &#x27;es&#x27;
+```
+
+You can check a working example at `examples/language.js`.
+
+#### Methods
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.mediaType" id="apidoc.element.negotiator.mediaType">
+        function <span class="apidocSignatureSpan">negotiator.</span>mediaType
+        <span class="apidocSignatureSpan">(accept, provided)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function preferredMediaTypes(accept, provided) {
+  // RFC 2616 sec 14.2: no header = */*
+  var accepts = parseAccept(accept === undefined ? &#x27;*/*&#x27; : accept || &#x27;&#x27;);
+
+  if (!provided) {
+    // sorted list of all types
+    return accepts
+      .filter(isQuality)
+      .sort(compareSpecs)
+      .map(getFullType);
+  }
+
+  var priorities = provided.map(function getPriority(type, index) {
+    return getMediaTypePriority(type, accepts, index);
+  });
+
+  // sorted list of accepted types
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getType(priority) {
+    return provided[priorities.indexOf(priority)];
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+negotiator.mediaTypes()
+// -&#x3e; [&#x27;text/html&#x27;, &#x27;image/jpeg&#x27;, &#x27;application/*&#x27;]
+
+negotiator.mediaTypes(availableMediaTypes)
+// -&#x3e; [&#x27;text/html&#x27;, &#x27;application/json&#x27;]
+
+negotiator.<span class="apidocCodeKeywordSpan">mediaType</span>(availableMediaTypes)
+// -&#x3e; &#x27;text/html&#x27;
+```
+
+You can check a working example at `examples/accept.js`.
+
+#### Methods
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.negotiator.Negotiator" id="apidoc.module.negotiator.Negotiator">module negotiator.Negotiator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.Negotiator.Negotiator" id="apidoc.element.negotiator.Negotiator.Negotiator">
+        function <span class="apidocSignatureSpan">negotiator.</span>Negotiator
+        <span class="apidocSignatureSpan">(request)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Negotiator(request) {
+  if (!(this instanceof Negotiator)) {
+    return new Negotiator(request);
+  }
+
+  this.request = request;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.negotiator.Negotiator.prototype" id="apidoc.module.negotiator.Negotiator.prototype">module negotiator.Negotiator.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.Negotiator.prototype.charset" id="apidoc.element.negotiator.Negotiator.prototype.charset">
+        function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>charset
+        <span class="apidocSignatureSpan">(available)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function charset(available) {
+  var set = this.charsets(available);
+  return set &#x26;&#x26; set[0];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+negotiator.charsets()
+// -&#x3e; [&#x27;utf-8&#x27;, &#x27;iso-8859-1&#x27;, &#x27;utf-7&#x27;]
+
+negotiator.charsets(availableCharsets)
+// -&#x3e; [&#x27;utf-8&#x27;, &#x27;iso-8859-1&#x27;]
+
+negotiator.<span class="apidocCodeKeywordSpan">charset</span>(availableCharsets)
+// -&#x3e; &#x27;utf-8&#x27;
+```
+
+You can check a working example at `examples/charset.js`.
+
+#### Methods
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.Negotiator.prototype.charsets" id="apidoc.element.negotiator.Negotiator.prototype.charsets">
+        function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>charsets
+        <span class="apidocSignatureSpan">(available)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function charsets(available) {
+  var preferredCharsets = loadModule(&#x27;charset&#x27;).preferredCharsets;
+  return preferredCharsets(this.request.headers[&#x27;accept-charset&#x27;], available);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+availableCharsets = [&#x27;utf-8&#x27;, &#x27;iso-8859-1&#x27;, &#x27;iso-8859-5&#x27;]
+
+negotiator = new Negotiator(request)
+
+// Let&#x27;s say Accept-Charset header is &#x27;utf-8, iso-8859-1;q=0.8, utf-7;q=0.2&#x27;
+
+negotiator.<span class="apidocCodeKeywordSpan">charsets</span>()
+// -&#x3e; [&#x27;utf-8&#x27;, &#x27;iso-8859-1&#x27;, &#x27;utf-7&#x27;]
+
+negotiator.charsets(availableCharsets)
+// -&#x3e; [&#x27;utf-8&#x27;, &#x27;iso-8859-1&#x27;]
+
+negotiator.charset(availableCharsets)
+// -&#x3e; &#x27;utf-8&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.Negotiator.prototype.encoding" id="apidoc.element.negotiator.Negotiator.prototype.encoding">
+        function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>encoding
+        <span class="apidocSignatureSpan">(available)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function encoding(available) {
+  var set = this.encodings(available);
+  return set &#x26;&#x26; set[0];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+negotiator.encodings()
+// -&#x3e; [&#x27;gzip&#x27;, &#x27;identity&#x27;, &#x27;compress&#x27;]
+
+negotiator.encodings(availableEncodings)
+// -&#x3e; [&#x27;gzip&#x27;, &#x27;identity&#x27;]
+
+negotiator.<span class="apidocCodeKeywordSpan">encoding</span>(availableEncodings)
+// -&#x3e; &#x27;gzip&#x27;
+```
+
+You can check a working example at `examples/encoding.js`.
+
+#### Methods
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.Negotiator.prototype.encodings" id="apidoc.element.negotiator.Negotiator.prototype.encodings">
+        function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>encodings
+        <span class="apidocSignatureSpan">(available)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function encodings(available) {
+  var preferredEncodings = loadModule(&#x27;encoding&#x27;).preferredEncodings;
+  return preferredEncodings(this.request.headers[&#x27;accept-encoding&#x27;], available);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+availableEncodings = [&#x27;identity&#x27;, &#x27;gzip&#x27;]
+
+negotiator = new Negotiator(request)
+
+// Let&#x27;s say Accept-Encoding header is &#x27;gzip, compress;q=0.2, identity;q=0.5&#x27;
+
+negotiator.<span class="apidocCodeKeywordSpan">encodings</span>()
+// -&#x3e; [&#x27;gzip&#x27;, &#x27;identity&#x27;, &#x27;compress&#x27;]
+
+negotiator.encodings(availableEncodings)
+// -&#x3e; [&#x27;gzip&#x27;, &#x27;identity&#x27;]
+
+negotiator.encoding(availableEncodings)
+// -&#x3e; &#x27;gzip&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.Negotiator.prototype.language" id="apidoc.element.negotiator.Negotiator.prototype.language">
+        function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>language
+        <span class="apidocSignatureSpan">(available)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function language(available) {
+  var set = this.languages(available);
+  return set &#x26;&#x26; set[0];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+negotiator.languages()
+// -&#x3e; [&#x27;es&#x27;, &#x27;pt&#x27;, &#x27;en&#x27;]
+
+negotiator.languages(availableLanguages)
+// -&#x3e; [&#x27;es&#x27;, &#x27;en&#x27;]
+
+language = negotiator.<span class="apidocCodeKeywordSpan">language</span>(availableLanguages)
+// -&#x3e; &#x27;es&#x27;
+```
+
+You can check a working example at `examples/language.js`.
+
+#### Methods
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.Negotiator.prototype.languages" id="apidoc.element.negotiator.Negotiator.prototype.languages">
+        function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>languages
+        <span class="apidocSignatureSpan">(available)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function languages(available) {
+  var preferredLanguages = loadModule(&#x27;language&#x27;).preferredLanguages;
+  return preferredLanguages(this.request.headers[&#x27;accept-language&#x27;], available);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+negotiator = new Negotiator(request)
+
+availableLanguages = [&#x27;en&#x27;, &#x27;es&#x27;, &#x27;fr&#x27;]
+
+// Let&#x27;s say Accept-Language header is &#x27;en;q=0.8, es, pt&#x27;
+
+negotiator.<span class="apidocCodeKeywordSpan">languages</span>()
+// -&#x3e; [&#x27;es&#x27;, &#x27;pt&#x27;, &#x27;en&#x27;]
+
+negotiator.languages(availableLanguages)
+// -&#x3e; [&#x27;es&#x27;, &#x27;en&#x27;]
+
+language = negotiator.language(availableLanguages)
+// -&#x3e; &#x27;es&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.Negotiator.prototype.mediaType" id="apidoc.element.negotiator.Negotiator.prototype.mediaType">
+        function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>mediaType
+        <span class="apidocSignatureSpan">(available)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mediaType(available) {
+  var set = this.mediaTypes(available);
+  return set &#x26;&#x26; set[0];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+negotiator.mediaTypes()
+// -&#x3e; [&#x27;text/html&#x27;, &#x27;image/jpeg&#x27;, &#x27;application/*&#x27;]
+
+negotiator.mediaTypes(availableMediaTypes)
+// -&#x3e; [&#x27;text/html&#x27;, &#x27;application/json&#x27;]
+
+negotiator.<span class="apidocCodeKeywordSpan">mediaType</span>(availableMediaTypes)
+// -&#x3e; &#x27;text/html&#x27;
+```
+
+You can check a working example at `examples/accept.js`.
+
+#### Methods
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.Negotiator.prototype.mediaTypes" id="apidoc.element.negotiator.Negotiator.prototype.mediaTypes">
+        function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>mediaTypes
+        <span class="apidocSignatureSpan">(available)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mediaTypes(available) {
+  var preferredMediaTypes = loadModule(&#x27;mediaType&#x27;).preferredMediaTypes;
+  return preferredMediaTypes(this.request.headers.accept, available);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+availableMediaTypes = [&#x27;text/html&#x27;, &#x27;text/plain&#x27;, &#x27;application/json&#x27;]
+
+// The negotiator constructor receives a request object
+negotiator = new Negotiator(request)
+
+// Let&#x27;s say Accept header is &#x27;text/html, application/*;q=0.2, image/jpeg;q=0.8&#x27;
+
+negotiator.<span class="apidocCodeKeywordSpan">mediaTypes</span>()
+// -&#x3e; [&#x27;text/html&#x27;, &#x27;image/jpeg&#x27;, &#x27;application/*&#x27;]
+
+negotiator.mediaTypes(availableMediaTypes)
+// -&#x3e; [&#x27;text/html&#x27;, &#x27;application/json&#x27;]
+
+negotiator.mediaType(availableMediaTypes)
+// -&#x3e; &#x27;text/html&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.Negotiator.prototype.preferredCharset" id="apidoc.element.negotiator.Negotiator.prototype.preferredCharset">
+        function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>preferredCharset
+        <span class="apidocSignatureSpan">(available)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function charset(available) {
+  var set = this.charsets(available);
+  return set &#x26;&#x26; set[0];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.Negotiator.prototype.preferredCharsets" id="apidoc.element.negotiator.Negotiator.prototype.preferredCharsets">
+        function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>preferredCharsets
+        <span class="apidocSignatureSpan">(available)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function charsets(available) {
+  var preferredCharsets = loadModule(&#x27;charset&#x27;).preferredCharsets;
+  return preferredCharsets(this.request.headers[&#x27;accept-charset&#x27;], available);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.Negotiator.prototype.preferredEncoding" id="apidoc.element.negotiator.Negotiator.prototype.preferredEncoding">
+        function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>preferredEncoding
+        <span class="apidocSignatureSpan">(available)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function encoding(available) {
+  var set = this.encodings(available);
+  return set &#x26;&#x26; set[0];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.Negotiator.prototype.preferredEncodings" id="apidoc.element.negotiator.Negotiator.prototype.preferredEncodings">
+        function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>preferredEncodings
+        <span class="apidocSignatureSpan">(available)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function encodings(available) {
+  var preferredEncodings = loadModule(&#x27;encoding&#x27;).preferredEncodings;
+  return preferredEncodings(this.request.headers[&#x27;accept-encoding&#x27;], available);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.Negotiator.prototype.preferredLanguage" id="apidoc.element.negotiator.Negotiator.prototype.preferredLanguage">
+        function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>preferredLanguage
+        <span class="apidocSignatureSpan">(available)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function language(available) {
+  var set = this.languages(available);
+  return set &#x26;&#x26; set[0];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.Negotiator.prototype.preferredLanguages" id="apidoc.element.negotiator.Negotiator.prototype.preferredLanguages">
+        function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>preferredLanguages
+        <span class="apidocSignatureSpan">(available)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function languages(available) {
+  var preferredLanguages = loadModule(&#x27;language&#x27;).preferredLanguages;
+  return preferredLanguages(this.request.headers[&#x27;accept-language&#x27;], available);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.Negotiator.prototype.preferredMediaType" id="apidoc.element.negotiator.Negotiator.prototype.preferredMediaType">
+        function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>preferredMediaType
+        <span class="apidocSignatureSpan">(available)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mediaType(available) {
+  var set = this.mediaTypes(available);
+  return set &#x26;&#x26; set[0];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.Negotiator.prototype.preferredMediaTypes" id="apidoc.element.negotiator.Negotiator.prototype.preferredMediaTypes">
+        function <span class="apidocSignatureSpan">negotiator.Negotiator.prototype.</span>preferredMediaTypes
+        <span class="apidocSignatureSpan">(available)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mediaTypes(available) {
+  var preferredMediaTypes = loadModule(&#x27;mediaType&#x27;).preferredMediaTypes;
+  return preferredMediaTypes(this.request.headers.accept, available);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.negotiator.charset" id="apidoc.module.negotiator.charset">module negotiator.charset</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.charset.charset" id="apidoc.element.negotiator.charset.charset">
+        function <span class="apidocSignatureSpan">negotiator.</span>charset
+        <span class="apidocSignatureSpan">(accept, provided)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function preferredCharsets(accept, provided) {
+  // RFC 2616 sec 14.2: no header = *
+  var accepts = parseAcceptCharset(accept === undefined ? &#x27;*&#x27; : accept || &#x27;&#x27;);
+
+  if (!provided) {
+    // sorted list of all charsets
+    return accepts
+      .filter(isQuality)
+      .sort(compareSpecs)
+      .map(getFullCharset);
+  }
+
+  var priorities = provided.map(function getPriority(type, index) {
+    return getCharsetPriority(type, accepts, index);
+  });
+
+  // sorted list of accepted charsets
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getCharset(priority) {
+    return provided[priorities.indexOf(priority)];
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+negotiator.charsets()
+// -&#x3e; [&#x27;utf-8&#x27;, &#x27;iso-8859-1&#x27;, &#x27;utf-7&#x27;]
+
+negotiator.charsets(availableCharsets)
+// -&#x3e; [&#x27;utf-8&#x27;, &#x27;iso-8859-1&#x27;]
+
+negotiator.<span class="apidocCodeKeywordSpan">charset</span>(availableCharsets)
+// -&#x3e; &#x27;utf-8&#x27;
+```
+
+You can check a working example at `examples/charset.js`.
+
+#### Methods
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.charset.preferredCharsets" id="apidoc.element.negotiator.charset.preferredCharsets">
+        function <span class="apidocSignatureSpan">negotiator.charset.</span>preferredCharsets
+        <span class="apidocSignatureSpan">(accept, provided)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function preferredCharsets(accept, provided) {
+  // RFC 2616 sec 14.2: no header = *
+  var accepts = parseAcceptCharset(accept === undefined ? &#x27;*&#x27; : accept || &#x27;&#x27;);
+
+  if (!provided) {
+    // sorted list of all charsets
+    return accepts
+      .filter(isQuality)
+      .sort(compareSpecs)
+      .map(getFullCharset);
+  }
+
+  var priorities = provided.map(function getPriority(type, index) {
+    return getCharsetPriority(type, accepts, index);
+  });
+
+  // sorted list of accepted charsets
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getCharset(priority) {
+    return provided[priorities.indexOf(priority)];
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.negotiator.encoding" id="apidoc.module.negotiator.encoding">module negotiator.encoding</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.encoding.encoding" id="apidoc.element.negotiator.encoding.encoding">
+        function <span class="apidocSignatureSpan">negotiator.</span>encoding
+        <span class="apidocSignatureSpan">(accept, provided)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function preferredEncodings(accept, provided) {
+  var accepts = parseAcceptEncoding(accept || &#x27;&#x27;);
+
+  if (!provided) {
+    // sorted list of all encodings
+    return accepts
+      .filter(isQuality)
+      .sort(compareSpecs)
+      .map(getFullEncoding);
+  }
+
+  var priorities = provided.map(function getPriority(type, index) {
+    return getEncodingPriority(type, accepts, index);
+  });
+
+  // sorted list of accepted encodings
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getEncoding(priority) {
+    return provided[priorities.indexOf(priority)];
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+negotiator.encodings()
+// -&#x3e; [&#x27;gzip&#x27;, &#x27;identity&#x27;, &#x27;compress&#x27;]
+
+negotiator.encodings(availableEncodings)
+// -&#x3e; [&#x27;gzip&#x27;, &#x27;identity&#x27;]
+
+negotiator.<span class="apidocCodeKeywordSpan">encoding</span>(availableEncodings)
+// -&#x3e; &#x27;gzip&#x27;
+```
+
+You can check a working example at `examples/encoding.js`.
+
+#### Methods
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.encoding.preferredEncodings" id="apidoc.element.negotiator.encoding.preferredEncodings">
+        function <span class="apidocSignatureSpan">negotiator.encoding.</span>preferredEncodings
+        <span class="apidocSignatureSpan">(accept, provided)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function preferredEncodings(accept, provided) {
+  var accepts = parseAcceptEncoding(accept || &#x27;&#x27;);
+
+  if (!provided) {
+    // sorted list of all encodings
+    return accepts
+      .filter(isQuality)
+      .sort(compareSpecs)
+      .map(getFullEncoding);
+  }
+
+  var priorities = provided.map(function getPriority(type, index) {
+    return getEncodingPriority(type, accepts, index);
+  });
+
+  // sorted list of accepted encodings
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getEncoding(priority) {
+    return provided[priorities.indexOf(priority)];
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.negotiator.language" id="apidoc.module.negotiator.language">module negotiator.language</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.language.language" id="apidoc.element.negotiator.language.language">
+        function <span class="apidocSignatureSpan">negotiator.</span>language
+        <span class="apidocSignatureSpan">(accept, provided)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function preferredLanguages(accept, provided) {
+  // RFC 2616 sec 14.4: no header = *
+  var accepts = parseAcceptLanguage(accept === undefined ? &#x27;*&#x27; : accept || &#x27;&#x27;);
+
+  if (!provided) {
+    // sorted list of all languages
+    return accepts
+      .filter(isQuality)
+      .sort(compareSpecs)
+      .map(getFullLanguage);
+  }
+
+  var priorities = provided.map(function getPriority(type, index) {
+    return getLanguagePriority(type, accepts, index);
+  });
+
+  // sorted list of accepted languages
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getLanguage(priority) {
+    return provided[priorities.indexOf(priority)];
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+negotiator.languages()
+// -&#x3e; [&#x27;es&#x27;, &#x27;pt&#x27;, &#x27;en&#x27;]
+
+negotiator.languages(availableLanguages)
+// -&#x3e; [&#x27;es&#x27;, &#x27;en&#x27;]
+
+language = negotiator.<span class="apidocCodeKeywordSpan">language</span>(availableLanguages)
+// -&#x3e; &#x27;es&#x27;
+```
+
+You can check a working example at `examples/language.js`.
+
+#### Methods
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.language.preferredLanguages" id="apidoc.element.negotiator.language.preferredLanguages">
+        function <span class="apidocSignatureSpan">negotiator.language.</span>preferredLanguages
+        <span class="apidocSignatureSpan">(accept, provided)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function preferredLanguages(accept, provided) {
+  // RFC 2616 sec 14.4: no header = *
+  var accepts = parseAcceptLanguage(accept === undefined ? &#x27;*&#x27; : accept || &#x27;&#x27;);
+
+  if (!provided) {
+    // sorted list of all languages
+    return accepts
+      .filter(isQuality)
+      .sort(compareSpecs)
+      .map(getFullLanguage);
+  }
+
+  var priorities = provided.map(function getPriority(type, index) {
+    return getLanguagePriority(type, accepts, index);
+  });
+
+  // sorted list of accepted languages
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getLanguage(priority) {
+    return provided[priorities.indexOf(priority)];
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.negotiator.mediaType" id="apidoc.module.negotiator.mediaType">module negotiator.mediaType</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.mediaType.mediaType" id="apidoc.element.negotiator.mediaType.mediaType">
+        function <span class="apidocSignatureSpan">negotiator.</span>mediaType
+        <span class="apidocSignatureSpan">(accept, provided)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function preferredMediaTypes(accept, provided) {
+  // RFC 2616 sec 14.2: no header = */*
+  var accepts = parseAccept(accept === undefined ? &#x27;*/*&#x27; : accept || &#x27;&#x27;);
+
+  if (!provided) {
+    // sorted list of all types
+    return accepts
+      .filter(isQuality)
+      .sort(compareSpecs)
+      .map(getFullType);
+  }
+
+  var priorities = provided.map(function getPriority(type, index) {
+    return getMediaTypePriority(type, accepts, index);
+  });
+
+  // sorted list of accepted types
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getType(priority) {
+    return provided[priorities.indexOf(priority)];
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+negotiator.mediaTypes()
+// -&#x3e; [&#x27;text/html&#x27;, &#x27;image/jpeg&#x27;, &#x27;application/*&#x27;]
+
+negotiator.mediaTypes(availableMediaTypes)
+// -&#x3e; [&#x27;text/html&#x27;, &#x27;application/json&#x27;]
+
+negotiator.<span class="apidocCodeKeywordSpan">mediaType</span>(availableMediaTypes)
+// -&#x3e; &#x27;text/html&#x27;
+```
+
+You can check a working example at `examples/accept.js`.
+
+#### Methods
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.negotiator.mediaType.preferredMediaTypes" id="apidoc.element.negotiator.mediaType.preferredMediaTypes">
+        function <span class="apidocSignatureSpan">negotiator.mediaType.</span>preferredMediaTypes
+        <span class="apidocSignatureSpan">(accept, provided)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function preferredMediaTypes(accept, provided) {
+  // RFC 2616 sec 14.2: no header = */*
+  var accepts = parseAccept(accept === undefined ? &#x27;*/*&#x27; : accept || &#x27;&#x27;);
+
+  if (!provided) {
+    // sorted list of all types
+    return accepts
+      .filter(isQuality)
+      .sort(compareSpecs)
+      .map(getFullType);
+  }
+
+  var priorities = provided.map(function getPriority(type, index) {
+    return getMediaTypePriority(type, accepts, index);
+  });
+
+  // sorted list of accepted types
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getType(priority) {
+    return provided[priorities.indexOf(priority)];
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
